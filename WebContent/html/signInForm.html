@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+	crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    	$('button').click(function(){
+    		const name=$("#name").val();
+    		const age=$("#age").val();
+    		const id=$("#id").val();
+    		const pw=$("#pw").val();
+    		const address=$("#address").val();
+    		alert(name+":"+age+":"+id+":"+pw+":"+address);
+    	$.post("../main",
+    			{sign:"memberSignIn", name, age, id, pw, address},
+    			function(data, status){
+    				alert(data+"\n가입 "+status);
+    				window.close();
+    				
+    			});
+    	});
+    });
+
+</script>
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body{
+    height:100%;
+}
+body {
+    background: linear-gradient(to bottom right, #4b00d7, #fa4c50);
+
+}
+
+#form {
+	color: white;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	margin-left: -250px;
+	margin-top: 250px;
+}
+#background-container{
+    background-color: rgb(250, 76, 80);
+    opacity: 50%;
+    height: 300px;
+}
+#background-container:hover{
+    opacity:100%
+}
+.input{
+    margin-left: 125px;
+}
+.button{
+    margin-left: 280px;
+}
+#signIn{
+    font-size:14px;
+    color: #ffffff;
+    border-bottom:3;
+    border-right: 3;
+    background-color:purple;
+    border-bottom-color: #3f0099;
+}
+#signIn:hover {
+    font-size:14px;
+    color: #3f0099;
+    border-bottom:3;
+    border-right: 3;
+    background-color: #ffffff;
+    border-bottom-color: #3f0099;	
+}
+</style>
+</head>
+<body>
+	<div id=form>
+		<div id=background-container>
+		<br><br><br><br>
+			<span class=input>name<input style="margin-left: 18px;" id="name"><br></span>
+			<span class=input>age<input style="margin-left: 31px;" id="age"><br></span>
+			<span class=input>ID<input style="margin-left: 42px;" id="id"><br> </span>
+			<span class=input>PW<input style="margin-left: 33px;" id="pw"><br></span>
+			<span class=input>Address<input id="address"><br></span>
+			<br>
+			<span class=button><button id=signIn>회원가입</button></span>	
+		</div>
+	</div>
+</body>
+</html>

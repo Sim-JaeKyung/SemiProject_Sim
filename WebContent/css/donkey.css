@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+#donkey-container{
+	border: 1px solid; 
+	overflow: scroll; 
+	height: 800px;
+	margin-top: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+}

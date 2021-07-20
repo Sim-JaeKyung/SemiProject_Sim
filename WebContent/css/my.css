@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.myBtn{
+	display: inline-block;
+	width: 30%;
+	height: 2rem;
+	border: 1px solid #c2337b;
+	border-radius: 20px;
+	background-color: #c2337b;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 0;
+	cursor: pointer;
+	transition: all 0.2s;
+	size: 20;
+	
+}
+
+.welcome{
+	display: inline;
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+
+table{
+	width: 100%;
+	border-top: 1px solid #444444;
+	border-collapse: collapse;
+}
+
+th, td{
+	border-bottom: 1px solid #444444;
+	padding: 10px;
+}
+
+table #articleNo{
+	text-align: center;
+}
+
+table #id{
+	width: 100px;
+}
+
+table #content{
+	width: 427.5px;
+}
+
+table #writeDate{
+	
+}
